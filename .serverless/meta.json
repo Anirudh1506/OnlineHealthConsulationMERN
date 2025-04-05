@@ -1,0 +1,78 @@
+{
+  "C:\\Users\\saipr\\Desktop\\online_health_consultation\\serverless.yml": {
+    "versionFramework": "4.9.1",
+    "servicePath": "C:\\Users\\saipr\\Desktop\\online_health_consultation\\serverless.yml",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "online-health-consultation",
+      "frameworkVersion": "3",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "region": "ap-south-1",
+        "environment": {
+          "NODE_ENV": "production"
+        },
+        "stage": "dev"
+      },
+      "functions": {
+        "api": {
+          "handler": "src/app/index.helloWorld",
+          "events": [
+            {
+              "http": {
+                "path": "/",
+                "method": "get",
+                "cors": true
+              }
+            }
+          ]
+        }
+      },
+      "plugins": [
+        "serverless-plugin-typescript"
+      ],
+      "package": {
+        "individually": true
+      }
+    },
+    "provider": {
+      "name": "aws",
+      "runtime": "nodejs18.x",
+      "region": "ap-south-1",
+      "environment": {
+        "NODE_ENV": "production"
+      },
+      "stage": "dev"
+    },
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "error": {
+      "message": "The Serverless version (4.9.1) does not satisfy the \"frameworkVersion\" (3) in serverless",
+      "stack": "ServerlessError2: The Serverless version (4.9.1) does not satisfy the \"frameworkVersion\" (3) in serverless\n    at Service.loadServiceFileParam (file:///C:/Users/saipr/.serverless/releases/4.9.1/package/dist/sf-core.js:810:9190)\n    at Service.load (file:///C:/Users/saipr/.serverless/releases/4.9.1/package/dist/sf-core.js:810:6834)\n    at Serverless.init (file:///C:/Users/saipr/.serverless/releases/4.9.1/package/dist/sf-core.js:816:9806)\n    at runFramework (file:///C:/Users/saipr/.serverless/releases/4.9.1/package/dist/sf-core.js:843:854)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async TraditionalRunner.run (file:///C:/Users/saipr/.serverless/releases/4.9.1/package/dist/sf-core.js:839:28308)\n    at async route (file:///C:/Users/saipr/.serverless/releases/4.9.1/package/dist/sf-core.js:877:2779)\n    at async Object.run (file:///C:/Users/saipr/.serverless/releases/4.9.1/package/dist/sf-core.js:878:3661)\n    at async run2 (file:///C:/Users/saipr/.serverless/releases/4.9.1/package/dist/sf-core.js:878:4814)",
+      "code": "FRAMEWORK_VERSION_MISMATCH"
+    },
+    "serviceRawFile": "service: online-health-consultation\r\n\r\nframeworkVersion: '3'\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  region: ap-south-1\r\n  environment:\r\n    NODE_ENV: production\r\n\r\nfunctions:\r\n  api:\r\n    handler: src/app/index.helloWorld\r\n    events:\r\n      - http:\r\n          path: /\r\n          method: get\r\n          cors: true\r\n\r\nplugins:\r\n  - serverless-plugin-typescript\r\n\r\npackage:\r\n  individually: true\r\n",
+    "command": [
+      "create"
+    ],
+    "options": {},
+    "orgId": "4b1d2aa3-87ee-4b5c-a2b4-10e1d1535f05",
+    "orgName": "testproj",
+    "userId": "cSHvv7JgYmLS36ZxNF",
+    "userName": "testproj",
+    "serviceProviderAwsAccountId": "710172730935",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}

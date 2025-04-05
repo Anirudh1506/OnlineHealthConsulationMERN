@@ -1,0 +1,28 @@
+service: online-health-consultation
+
+frameworkVersion: '3'
+
+useDotenv: true
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-south-1
+  environment:
+    NODE_ENV: production
+
+functions:
+  api:
+    handler: src/app/index.helloWorld
+    events:
+      - http:
+          path: /
+          method: get
+          cors: true
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+package:
+  individually: true
