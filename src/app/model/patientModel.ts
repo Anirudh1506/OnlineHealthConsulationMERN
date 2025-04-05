@@ -9,7 +9,7 @@ export interface Patient{
     location: string,
     appointments: Appointment[],
     activeIssues:Issue[],
-    complatedIssues: Issue[],
+    completedIssues: Issue[],
     subscriptionDetails:subscriptionDetails
 }
 
